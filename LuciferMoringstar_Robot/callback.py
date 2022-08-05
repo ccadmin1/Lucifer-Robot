@@ -280,22 +280,22 @@ async def cb_handler(bot, update):
               
         elif update.data == "start":
             buttons = [[
-                InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f'http://t.me/{temp.Bot_Username}?startgroup=true')
               ],[
-                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+                InlineKeyboardButton('𝘔𝘖𝘙𝘌 𝘉𝘜𝘛𝘛𝘖𝘕', callback_data='help')
               ],[
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+                InlineKeyboardButton('𝘜𝘗𝘋𝘈𝘛𝘌 𝘊𝘏𝘈𝘕𝘕𝘌𝘓', url=f'https://t.me/+35tXs6B4kT04YjRl')
                  ]]
             await update.message.edit(START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
 
         elif update.data == "help":
             try:
                 buttons = [[
-            InlineKeyboardButton('Update', url=f'https://t.me/+2khw8Q053Wo1Mzg9')
+            InlineKeyboardButton('𝘜𝘗𝘋𝘈𝘛𝘌 𝘊𝘏𝘈𝘕𝘕𝘌𝘓', url=f'https://t.me/+2khw8Q053Wo1Mzg9')
             ],[
-            InlineKeyboardButton('status', callback_data='status')
+            InlineKeyboardButton('𝘚𝘛𝘈𝘛𝘜𝘚', callback_data='status')
             ],[
-            InlineKeyboardButton('Home', callback_data='start')
+            InlineKeyboardButton('𝘏𝘖𝘔𝘌', callback_data='start')
         ]]           
                 await update.message.edit(HELP_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
             except MessageNotModified:
@@ -303,9 +303,9 @@ async def cb_handler(bot, update):
         elif update.data == "about":
             try:
                 buttons = [[
-            InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+            InlineKeyboardButton('𝘔𝘖𝘙𝘌 𝘉𝘜𝘛𝘛𝘖𝘕', callback_data='help')
             ],[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+            InlineKeyboardButton('𝘜𝘗𝘋𝘈𝘛𝘌 𝘊𝘏𝘈𝘕𝘕𝘌𝘓', url=f'https://t.me/+35tXs6B4kT04YjRl')
         ]]                    
                 await update.message.edit(ABOUT_MESSAGE.format(name=CREATOR_NAME, username=CREATOR_USERNAME, py3_version=temp.PY3_VERSION, pyro_version=temp.PYRO_VERSION, version=temp.BOT_VERSION, reply_markup=InlineKeyboardMarkup(buttons)))
             except MessageNotModified:
