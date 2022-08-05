@@ -60,7 +60,7 @@ async def start(bot: lucifermoringstar_robot, update):
                 InlineKeyboardButton('💫 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/+97gmBAMfVDVlN2Q1')
             ],
             [
-                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data="help"),
                 InlineKeyboardButton('》𝘾𝙇𝙊𝙎𝙀《', callback_data="close_data"),
             ]
             ] 
