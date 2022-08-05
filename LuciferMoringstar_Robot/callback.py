@@ -279,24 +279,34 @@ async def cb_handler(bot, update):
                 return
               
         elif update.data == "start":
-            buttons = [[ InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                      [ InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+2khw8Q053Wo1Mzg9") ],
-                      [ InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about") ]] 
+            buttons = [[
+                InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+              ],[
+                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+              ],[
+                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+                 ]]
             await update.message.edit(START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
 
         elif update.data == "help":
             try:
                 buttons = [[
-                 InlineKeyboardButton("Status", callback_data="status"),
-                 InlineKeyboardButton("Home", callback_data="start")
-                 ]]                     
+            InlineKeyboardButton('Update', url=f'https://t.me/+2khw8Q053Wo1Mzg9')
+            ],[
+            InlineKeyboardButton('status', callback_data='status')
+            ],[
+            InlineKeyboardButton('Home', callback_data='start')
+        ]]           
                 await update.message.edit(HELP_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
             except MessageNotModified:
                 pass
         elif update.data == "about":
             try:
-                buttons = [[ InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+2khw8Q053Wo1Mzg9")],
-                      [ InlineKeyboardButton("𝙷𝙾𝙼𝙴", callback_data="start"), InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data="close") ]]                     
+                buttons = [[
+            InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+            ],[
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+        ]]                    
                 await update.message.edit(ABOUT_MESSAGE.format(name=CREATOR_NAME, username=CREATOR_USERNAME, py3_version=temp.PY3_VERSION, pyro_version=temp.PYRO_VERSION, version=temp.BOT_VERSION, reply_markup=InlineKeyboardMarkup(buttons)))
             except MessageNotModified:
                 pass
