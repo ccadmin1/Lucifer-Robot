@@ -57,10 +57,12 @@ async def start(bot: lucifermoringstar_robot, update):
     if len(update.command) != 2:
         pr0fess0r_99 = [
             [
-                InlineKeyboardButton('💫 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/+97gmBAMfVDVlN2Q1')
+                InlineKeyboardButton('𝘜𝘗𝘋𝘈𝘛𝘌 𝘊𝘏𝘈𝘕𝘕𝘌𝘓', url='https://t.me/+97gmBAMfVDVlN2Q1')
             ],
             [
-                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data="help"),
+                InlineKeyboardButton('𝘔𝘖𝘙𝘌 𝘉𝘜𝘛𝘛𝘖𝘕', callback_data="help")
+            ],
+            [
                 InlineKeyboardButton('》𝘾𝙇𝙊𝙎𝙀《', callback_data="close_data"),
             ]
             ] 
@@ -73,11 +75,11 @@ async def admin(bot: lucifermoringstar_robot, update):
 @lucifermoringstar_robot.on_message(filters.command(["about"]) & filters.private, group=3)
 async def about(bot: lucifermoringstar_robot, update):
     pr0fess0r_99 = [[
-            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f"http://t.me/{temp.Bot_Username}?startgroup=true")
             ],[
-            InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+            InlineKeyboardButton('𝘈𝘉𝘖𝘜𝘛', callback_data='about')
             ],[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+            InlineKeyboardButton('𝘜𝘗𝘋𝘈𝘛𝘌 𝘊𝘏𝘈𝘕𝘕𝘌𝘓', url=f'https://t.me/+35tXs6B4kT04YjRl')
         ]]                     
     await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE, reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close") ]] ))
 
