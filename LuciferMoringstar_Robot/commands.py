@@ -55,9 +55,15 @@ async def start(bot: lucifermoringstar_robot, update):
         return
 
     if len(update.command) != 2:
-        pr0fess0r_99 = [[ InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                        [ InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+2khw8Q053Wo1Mzg9") ],
-                        [ InlineKeyboardButton("ʜᴇʟᴘ", callback_data="help") ]] 
+        pr0fess0r_99 = [
+            [
+                InlineKeyboardButton('💫 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/+97gmBAMfVDVlN2Q1')
+            ],
+            [
+                InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('》𝘾𝙇𝙊𝙎𝙀《', callback_data="close_data"),
+            ]
+            ] 
         await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
 
 @lucifermoringstar_robot.on_message(filters.command(["admin", "admins"]) & filters.user(ADMINS) & filters.private, group=2)
@@ -66,8 +72,13 @@ async def admin(bot: lucifermoringstar_robot, update):
 
 @lucifermoringstar_robot.on_message(filters.command(["about"]) & filters.private, group=3)
 async def about(bot: lucifermoringstar_robot, update):
-    pr0fess0r_99 = [[ InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+2khw8Q053Wo1Mzg9" ],
-                    [ InlineKeyboardButton("ᴍᴀɪɴ ᴍᴇɴᴜ", callback_data="start"), InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close") ]]                     
+    pr0fess0r_99 = [[
+            InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝘾𝙃𝘼𝙏 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('ᴄʟɪᴄᴋ ʙᴜᴛᴛᴏɴ ғᴏʀ ᴍᴏʀᴇ', callback_data='help')
+            ],[
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
+        ]]                     
     await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
 
 
