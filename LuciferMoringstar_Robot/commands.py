@@ -68,7 +68,7 @@ async def admin(bot: lucifermoringstar_robot, update):
 async def about(bot: lucifermoringstar_robot, update):
     pr0fess0r_99 = [[ InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+2khw8Q053Wo1Mzg9" ],
                     [ InlineKeyboardButton("ᴍᴀɪɴ ᴍᴇɴᴜ", callback_data="start"), InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close") ]]                     
-    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, source = "https://github.com/PR0FESS0R-99/LuciferMoringstar-Robot"), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
+    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
 
 
 @lucifermoringstar_robot.on_message(filters.command(["broadcast"]) & filters.user(ADMINS) & filters.private, group=5)
