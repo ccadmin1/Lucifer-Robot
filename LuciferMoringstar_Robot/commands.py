@@ -79,7 +79,7 @@ async def about(bot: lucifermoringstar_robot, update):
             ],[
             InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/+35tXs6B4kT04YjRl')
         ]]                     
-    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
+    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_TXT, reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close") ]] ))
 
 
 @lucifermoringstar_robot.on_message(filters.command(["broadcast"]) & filters.user(ADMINS) & filters.private, group=5)
